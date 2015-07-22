@@ -1,0 +1,1 @@
+@(msg: String)@Messages("Hello \"world\"") test

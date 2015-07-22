@@ -138,7 +138,7 @@ module.exports = function (grunt) {
                 if (input.match(/\.(htm(|l)|php|phtml)$/)) {
                     extractHtml(input);
                 }
-                if (input.match(/\.(scala(|\.html))$/)) {
+                if (input.match(/\.(scala(|\.\w+))$/)) {
                     extractScala(input);
                 }
                 if (input.match(/\.js$/)) {

@@ -24,3 +24,14 @@ describe 'Extract: Scala', ->
             assert.equal items.length, 1
             assert.equal items[0].msgid, "Hello \\\"world\\\""
             done()
+
+    it "Extracts strings from Scala Play txt templates", (done) ->
+        file = 'tmp/test16.pot'
+        assert fs.existsSync(file)
+
+        po.load file, (err, catalog) ->
+            assert.equal(err, null)
+            items = catalog.items
+            assert.equal items.length, 1
+            assert.equal items[0].msgid, "Hello \\\"world\\\""
+            done()
